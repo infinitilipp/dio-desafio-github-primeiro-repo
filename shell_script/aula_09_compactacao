@@ -1,0 +1,116 @@
+Compactadores
+programas q diminuem o tamanho de um arquivo ou diretório, ocupam
+um espaço no sistema e no hd
+qnd precisa esse arquivo ser colocado na nuvem, passar p pendrive, email etc 
+diminui tamanho dele p ser + rapido a transferencia ou ocupar - espaço
+
+Extensões
+identificam o tipo de um arquivo e o programa necessário p manipular o mesmo,
+dezenas de extensões identificam arquivos compactados, quando um arquivo é
+compactado, uma extensão é add ao nome do arquivo.
+Ex: se um arquivo é compactado pelo programa rar, o mesmo receberá a extensão
+.rar
+ao descompactar a extensão é removida do arquivo.
+"sobrenome" p chamar o arquivo em/por seus devidos programas
+
+windows ->winrar, winzip, etc .rar .zip
+ao descompactar o arquivo, essa extensão é removida
+
+linux:
+gzip - compactador mt usado, possui uma taxa excelente de compactação
+(NIVEL Q ELE VAI COMPACTAR, + compactaçao, menor o arquivo)
+
+uso:
+gzip arquivo.txt
+vai virar arquivo.txt.gz
+aularedes.txt compactado tá 1,3kb
+
+p descompactar:
+gunzip arquivo.txt.gz
+descompactado -> 3,0kb
+
+dá p aumentar a taxa de compactação
+
+gzip -9 arquivo.txt -> usa a taxa de compactação máxima do gzip
+diferença n mta se for arq pequeno
+se fosse de gb oou mb, daria diferença, maior o arq. maior a compactação
+
+OUTRO COMPACTADOR
+zip (tb do windows)
+zip arquivo.zip arquivo.txt
+arquivo.zip seria o nome do arquivo q ele vai gerar
+
++ DE 1 ARQUIVO
+zip arquivos.zip distros.txt maio.txt
+p comprimir e fazer transferencia
+
+p descompactar zip:
+unzip arquivo.zip
+
+o arquivo .zip ainda vai existir, vai só descompactar. p remover é rm arquivo.zip
+
+OUTRO COMPACTADOR
+bzip2
+bzip2 arquivo
+virou aularedes.txt.bz2
+
+p descompactar bz2:
+bzip2 -d arquivo.bz2
+
+RAR
+rar -> precis ser instalado
+rar a arquivo.rar arquivo
+
+p descompactar rar:
+rar x arquivo.rar
+
+ARQUIVADORES
+junta arquivos em 1 só, mas pode ser usado em conjunto c compactador p armazenar arquivos
+compactados.
+
+tar
+é um arquivador mt usado no linux e até em arquivos de sistema.
+tar -cf aularedes.txt.tar aularedes.txt 
+(aularedes.txt.tar é o nome do arquivo gerado)
+(aularedes.txt , maio.txt são arquivos q serao arquivados, pod eser + de 1)
+
+tar -cf arquivos.tar aularedes.txt maio.txt distros.txt
+da ainda p compactar ele: gzip arquivos.tar
+
+P DESCOMPACTAR
+usa o proprio tar
+tar -xvf aularedes.txt.tar.gz
+ainda aparece la os 3 arquivos
+
+tar -xvf arquivos.txt.tar.gz -C ~/Downloads
+é extraido p outro diretorio
+
+da p criar arquivos compactados com qualquer outro compactador junto c tar
+gunzip arquivos.tar.gz
+
+zip arquivos.tar.zip arquivos.tar
+o msm com rar
+rar a arquivos.tar.rar arquivos.tar
+
+bzip2 arquivos.tar
+bzip2 -d arquivos.tar.bz2 p virar arquivos.tar dnv
+
+
+LEMBRAR
+gzip -> gzip arquivo
+zip arquivogerado.zip arquivo (igual rar)
+rar arquivogerado.rar arquivo
+rar x compactar.rar (p descompactar)
+
+gzip compactar.txt
+gunzip compactar.txt.gz
+bzip2 compactar.txt
+bzip2 -d compactar.txt.bz2
+
+tar -cf compactado.tar compactado.txt
+gzip compactado.tar (virou .tar.gz)
+tar -xvf compactado.tar.gz (extraiu o compactar.txt)
+
+rm -r compactar*
+rm -r *zip e etc.
+

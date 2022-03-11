@@ -1,0 +1,15 @@
+só o cat q era a ultima
+cat
+cria arquivos, une arquivos e exibe arquivos
+
+cat arq1 > arq_final
+*redirecionador de saída >
+
+p/ parar a rolagem da tela e permitir a navegação use o pipe |
+More ou less
+
+p/mandar oq tem num arq.txt pro outro:
+cat arq.txt > arq_final.txt
+
+cat arq_final.txt irá exibir oq tinha no arq.txt
+(lembrando q touch cria arquivo)

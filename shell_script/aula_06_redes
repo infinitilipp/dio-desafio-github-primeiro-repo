@@ -1,0 +1,76 @@
+rede -> conjunto de equipamentos interligados de maneira q troquem informações e compartilhem recursos (banda da net, arquivos, impressoras etc)
+há redes MAIORES q da de casa
+nó -> cada ponto conectado na rede (ponto de conexao)
+
+WAN -> geograficamente bem distribuida (internet por alguns autores é considerada
+wan, cobertura mundial) é uma rede maior, ligando continentes etc
+MAN-> redes menores, rede metropolitana q interliga várias redes locais
+uma metropole a uma cidade etc, entre predios de uma metropole
+LAN -> rede local de uma forma geral em 1 unico predio, campus, escola, dentro
+de 1 única instalação, local
+
+tradutores fazem linguagem de comunicaçao entre 1 maquina e outra, 1 rede e outra ->
+PROTOCOLOS
+É a linguagem usada pelos dispositivos de uma rede de modo que eles consigam se
+entender (Torres,2004). Há vários protocolos
+de streaming de video, VOIP, bluetooth, de comunicaçao via mensagem instantanea
+
+IP - Protocolo de Internet - Endereço IP - numeros q identificam seu pc numa rede
+ICMP - Internet COntrol MEssage Protocol) tem por objetivo prover mensagens de controle
+na comunicação entre nós
+DNS - Domain Name Server - esse protocolo de aplicação tem por função identificar
+endereços IPs e manter uma tabela com os endereços dos caminhos de algumas redes
+
+ping -> msg p determinado host, nó p/ver se ta ativo ou n pra comunicaçao
+
+interface de rede -> software e/ou hardware (como placa de rede) q faz a comunicaçao
+em uma rede de computers.
+as interfaces de rede no linux estao localizadas no diretório /dev e a maioria
+é criada dinamicamente pelos softwares quando são requisitadas.
+exemplo: eth0 - placa de rede ethernet - cabeada
+
+interface loopback é um tipo especial de interface q permite fazer conexoes
+com vc mesmo, c/ela, vc pode testar varios programas de rede sem interferir em sua
+rede. por padrão, o endereço ip 127.0.0.1 foi escolhido p/loopback.
+tipo usar server php etc
+
+a parte do "inet 192.168.0.104" é essa maquina na rede local, ipv4. é o ip dessa maquina
+netmask -> numero de 32 bits q separa rede publica da minha rede privada
+broadcast -> "endereço publico da minha rede local"
+se mando mensagem p esse endereço, todos os pcs q tao dessa rede recebem
+a msm mesnagem 
+inet6 -> ipv6 hexadecimal, permite mt mais computadores na internet pq ipv4 tava
+lotado
+ether -> endereço MAC -> endereço fisico, da placa de rede, é único, gravado na placa
+tipo cpf
+
+e tem o ip loopback, 127.0.0.1
+hostname -> nome do computador na rede (debian)
+hostname -I -> endereço IP da rede local
+hostname -i -> loopback
+who -> como estamos logados nessa rede
+whoami qm e
+ping -> faz parte do protocolo ICMP, controle de determinado host, p ver se
+ta ativo ou inativo, há resposta
+envia ping (pacote de requisição opara o host) e recebe as respostas, o "pong"
+ping-pong!
+ctrl z ou da p por limite de pacotes p enviar
+
+ping -w 4 -> envia 4 pacotes de ping
+
+dig -> informaçoes sobre dns
+DNS facilita p q n precise saber o endereço
+google -> 216.58.202.132
+
+traceroute -> nós q passam ate um x servidor
+daq pro roteador, p distribuidora de internet, rede man, rede wan, por satelite,
+ate outro pais, server do google e tal
+
+dig +short -> aparece endereço do site
+
+whois discord.com -> acha nome do dominio, owner, respoonsavel, pais, server DNS,
+informaçoes de contato do dominio
+
+finger -> informaçoes do usuario, desde qnd esta logado, telefone, endereco, etc
+
+w - informaçoes detalhadas soobre o usuario do computador na rede

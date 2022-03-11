@@ -1,0 +1,124 @@
+adduser dio
+su dio -> trocoou de usuario
+passwd nomedoousuario ->troca a senha
+ZENIT
+POLAR
+BTULE
+bruno Btul3@
+
+lastlog -> exibe informaçoes de login dos usuarios
+last -> exibe uma listagem de entrada e saida do user no sistema
+do seu login ultimas vezes, com o reboot
+logname -> nome do usuario atual logado no sistema
+
+id -> exibe todos os identificadores do usuário (a q grupo ele pertence)
+
+cat /etc/passwd -> exibe todos os usuários
+
+userdel -r -> remove o usuario e a pasta
+
+grupos - organizam usuarios e definem as permissões de acesso a arquivos 
+e diretorios de forma + izi
+
+cat /etc/group -> exibe todos os grupos do sistema
+
+groups -> exibe todos os grupos de um usuário (aos quais ele pertence)
+
+sudo addgroup -> add um grupo
+adduser usuario grupo -> add um usuario a um grupo
+gpasswd -a usuário grupo -> add um usuario a um grupo tbm (precisa sudo)
+gpasswd -d usuário grupo -> remove um usuario de um grupo
+sudo gpasswd -a maquina teste
+
+groupdel grupo -> remove grupo
+
+
+permissoes em arquivos e diretórios servem para restringir 
+acessos como: leitura, escritura e execução, onde
+r - read (leitura)
+w - write (escrita)
+x - eXecution (execução)
+
+verificar permissões em um diretório
+ls -lh
+1ª letra - tipo do q ta sendo listado
+d : diretório;  - : arquivo
+
+CONTROLE DE PERMISSÕES
+dono, permissão de quem está no grupo e permissão de outros (nem estao no grupo)
+drwxr-xr-x
+d (é diretório)
+rwx (dono tem permissão de leitura, escrita e executar)
+r-x (do grupo tem leitura, NÃO tem de escrita e tem de execução)
+r-x (outros tem leitura, NÃO tem de escrita e tem de execução)
+
+se fosse r-- , poderia dar um cat só
+
+mudar a permissão de um arquivo ou diretório:
+chmod
+
+Modo octal (decimal -> 0 a 9; octal -> 0 a 7)
+como opção do chmod, há o octal
+a máscara octal é coomposta por numeros sob a base 8 ou seja de 0 a 7 onde:
+o 1º dígito é o dono do ficheiro/diretório(u)
+o 2º dígito é o grupo (g)
+o 3º digito representa os outros (o)
+as permissões são especificadas para cada grupo.
+
+somente na atribuição de leitura , o 4
+na de escrita, 2
+na de execução, 1
+(tem coluna p usuario, grupo e outros) precisa usar as 3 colunas p atribuir
+permissoes ou restricoes
+
+somente a permissoa de EXECUÇAO pro usuário dono, nenhuma permissao p grupo e outro:
+pega 1 numero por coluna
+x -> 1 (do campo usuario)
+campo grupo -> 0
+outros -> 0
+1 pra usuario, 0 p grupo e 0 p outros
+
+chmod 100 aularedes.txt
+ls -lh
+saída: ---x------ 1 infiniti infiniti 3,0K abr  5 23:34 aularedes.txt
+
+só permissao de escrita:
+2  0  0
+chmod 200 aularedes.txt
+ls -lh
+--w------- 1 infiniti infiniti 3,0K abr  5 23:34 aularedes.txt
+
+se eu quiser GRAVAÇAO E ESCRITA -> soma (2 + 1); pros outros campos fica 0 se n quiser nd
+chmod 300 aularedes.txt
+
+GRAVAÇAO, ESCRITA E LEITURA -> 4 + 2 + 1 = 7
+chmod 700 aularedes.txt
+-rwx------ 1 infiniti infiniti 3,0K abr  5 23:34 aularedes.txt
+
+conta é a msm c outros
+TODAS p user 4 + 2 + 1 = 7
+LEITURA E EXECUÇAO P grupo 4 + 1 = 5
+OUTROS 4 +1 = 5
+chmod 755 aularedes.txt
+-rwxr-xr-x 1 infiniti infiniti 3,0K abr  5 23:34 aularedes.txt
+
+MAIS ALTO NIVEL DE PRIVILEGIO P USUARIOS, GRUPO E OUTROS: 777
+acesso de ler, gravar a executar
+chmod 777 aularedes.txt
+-rwxrwxrwx 1 infiniti infiniti 3,0K abr  5 23:34 aularedes.txt
+tomar cuidado c esse privilegio, qualquer usuario dentro e fora do sistema
+pode ler, escrever e executar comandos q envolvam esse arquivo.
+
+infiniti@debian:~$ sudo adduser teste grupoteste
+vai adicionar o usuario teste ao grupoteste (só adduser teste cria o usuario teste)
+
+sudo addgroup grupoteste
+groups exibe grupos (e com cat /etc/group)
+su teste -> loga no user teste
+sudo passwd teste -> troca a senha do usuario teste
+
+sudo userdel -r teste -> remove ele
+fecha o terminal pq fala q ta c processo
+
+sudo groupdel grupoteste -> deleta grupo
+ cat /etc/group | grep grupoteste -> procura se tem o grupo grupoteste

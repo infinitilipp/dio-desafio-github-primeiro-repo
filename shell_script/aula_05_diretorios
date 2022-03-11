@@ -1,0 +1,49 @@
+/bin/ -> binarios princ dos users
+boot -> arquivos de sistema do booot
+dev - arq de dispositivos
+etc - arquivos de configuraçao do sistema
+home - diretorio dos usuarios comuns do sistema
+lib - bibliotecas essenciais do sistema e os modulos do kernel
+media - diretorio de montagem e dispositivos
+mnt - diretorio de montagem de dispositivos - mesmo que media.
+
+
+free -> memoria
+
+uname --r -> versao do okernel
+uname -> kernel
+uname -m -> arquitetura igual comando arch
+
+du -h ~ -> vai ver o diretorio pessoal, oq usa de qtd do hd
+(human readable, leitura facilitada pro humano)
+
+df -h -> vê o espaço do disco
+
+cat /etc/passwd -> ve todos os usuarios de sistema no começo
+ve ate o meu, com a pasta tbm /bin/bash, q e meu terminal com configuraçoes
+
+reboot -> reinicia maquina virtual, reboota
+shutdown -h now -> igual poweroff, agora
+shutdown -r -> mesma coisa q reboot
+
+lscpu -> mostra info sobre cpu (provavel + facil q cpuinfo)
+lshw -> um monte de coisa sobre hardware
+lshw -short -> alguns tipos de dispotivismos, classe e descrição
+
+lspci -> exibe todas as placas PCI conectadas
+lsusb -> exibe todoos os dispositivos usb conectados
+
+echo -e "---INFORMAÇÕES DE HARDWARE---\n" -> ter quebra de linha, c o -e
+echo -e "\n---INFORMAÇÕES DE PLACAS PCI---\n" -> pula linha no começo e fim
+lspci >> minhamaquina2.txt -> vai add as informaçoes de pci no arq
+p ficar tipo oem sessão
+ echo "Nome do Kernel: " >> minhamaquina2.txt
+infiniti@debian:~/Área de trabalho$ uname >> minhamaquina2.txt
+infiniti@debian:~/Área de trabalho$ echo "Versão do Kernel: " >> minhamaquina2.txt
+infiniti@debian:~/Área de trabalho$ uname -r >> minhamaquina2.txt
+
+faltou informações sobre o hardware (lshw), precisa de sudo aq, no começo ( p personalizar um pro
+cliente e algo assim)
+
+Informações de Processamentos. -> cat /proc/cpuinfo
+

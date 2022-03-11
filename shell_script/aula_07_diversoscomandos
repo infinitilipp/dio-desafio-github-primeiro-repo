@@ -1,0 +1,50 @@
+é fuçando q se aprende!
+history
+
+alias - da nickname a 1 determinado comando
+alias hh='history'
+
+nl arq.txt -> conta n de linhas ,exibindo com o cat igual
+wc -l arq.txt -> conta n de linhas, contando brancas tbm
+wc -w aularedes.txt -> conta o numero de palavras
+wc -m -> conta oo numero de caracteres
+wc -c -> numero em bytes
+
+ls -a -> exibe arquivos ocultos
+
+cmp aularedes.txt vazio.txt ->compara, fim de arquivo - 1 está vazio e o outro n
+
+diff aularedes.txt vazio.txt -> mostra os arquivos q estao preenchidos
+
+sort -n-> organiza conteudo do arquivo em ordem numerica
+
+last reboot -> fala informaçoes sobre ultimos boots do sistema
+
+route -n -> tabela de roteamento IP do kernel
+
+time comando -> mostra o tempo q leva pro comando ser feito pelo sistema
+tipo time traceroute www.google.com
+
+uptime -> tempo q ta up
+
+cowsay -> vaquinha falando
+cowsay -d -> vaquinha estragada
+ -g gananciosa 
+-f tux,dragon,koala-vader,etc
+cowsay -f vader "linux"
+
+cmatrix incrivel
+init 0 desliga tbm
+halt desliga tbm com autenticaçao
+telinit 0 tbm desliga
+history -c limpa o historico de comandos
+
+seq 1 10 -> retorna sequencia de numeros
+seq 1 10 -> vazio.txt e taltal
+
+https://bellard.org/jslinux/
+
+whereis ls -> retorna o lugar do programa e onde ta o manual
+which ls - retorna so o caminho do programa
+
+shutdown -h now, init 0, telinit 0, e halt p desligar rapido

@@ -1,0 +1,92 @@
+lembrando q é no ubuntu e fedora
+
+PACOTES
+são programas colocados dentro de um arquivo identificados
+por sua extensão, e incluem arquivos necessários p/instalaçao
+de um programa.
+existem com a extensão .deb, .rpm etc
+
+GERENCIADORES de pacotes
+são sistemas q possuem resolução automatica de dependencia entre pacotes,
+metodo facil de instalação de pacotes
+dpgk, apt e yum
+
+
+
+
+apt
+instalar pacote:
+sudo apt install pacote
+atualizar: 
+sudo apt upgrade pacote
+p/remover:
+sudo apt remove pacote
+
+atualização de sistemas
+apt
+apt update && apt upgrade
+
+pkgs.org
+rpm.pbone.net
+da p ir la nesses sites e baixar pacotes
+
+
+
+dpkg -> outro gerenciador de pacotes q serve p/ instalar ou remover
+pacotes do tipo .deb
+uso:
+sudo dpkg -i
+
+pega o binary package do download, coloca no navegador e baixa esse .deb, vai
+p downloads
+
+p instalar: sudo dpkg -i pacotebaixado.deb
+
+p ver descrição do pacote: (I maiúsculo)
+sudo dpkg -I pacote.deb
+pode usar tbm pra paginar | more
+
+remoção
+sudo dpkg -r nomedopacote
+(o nomedopacote é dado na DESCRIÇÃO DO PACOTE, nao aquele .deb)
+
+na descrição sudo dpkg -I pacote.deb :
+Package: docker-ce-cli por exemplo
+p remover: sudo dpkg -r docker-ce-cli
+
+
+
+
+fedora tem gerenciadores de pacotes diferenciados
+
+rpm
+rpm -ivh pacote.rpm
+
+tbm pega o binary package referente a um pacote do fedora, poe no
+navegador, save file
+cd Downloads/
+vai na psta de downloads, sudo rpm -ivh pacote.rpm
+e vai instalar o pacote
+
+atualizar:
+sudo rpm -U pacote.rpm
+
+remover:
+rpm -e pacote.rpm
+
+
+
+yum (é gerenciador de pacote rpm, n existe pacotes yum)
+yum install pacote
+sudo yum install postgresql
+(nome do pacote mesmo)
+ele faz o DOWNLOAD e a INSTALAÇAO do pacote, igual apt
+
+atualizar:
+yum update pacote (por ex postgresql)
+sudo yum update postgresql
+
+remover:
+yum remove pacote (por ex postgresql)
+sudo yum remove postgresql
+

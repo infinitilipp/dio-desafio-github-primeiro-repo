@@ -1,0 +1,107 @@
+mv - move arquivos e diretórios e renomeia arquivos e diretórios.
+
+-i: confirme antes de substituir
+-n:sem substituição
+-b substituindo pelo backup
+-u substitua se o arq de destino for antigo ou não existir
+
+mv -i mv-comando.txt meudiretorio
+
+exito em qlqr comando -> n retorna nd
+se os arq tiverem noome igual, vai perguntar (y ou n), se usar -i msm assim
+se n, vai continuar la o arquivo, se s, sobrescreve
+
+com mv -n mv-comando.txt meudiretorio (mesmo tendo no meudiretorio arq com mesmo noome)
+n substituiu por causa da frag -n
+
+msm coisa com -b, foi, e foi substituído como backup
+
+mv -u mv.txt meudiretorio -> foi, pq substitui o arquivo de destino pq n existe la
+
+
+
+
+copiar arquivos
+sem confirmação de existencia ou n, exceto se usar a flag -i (interativa)
+nenhuma saída será exibida, exceto se usar o flag -v (verbose)
+
+-v vai dar p ver, detalha como foi enviado.
+interessante qnd copia pastas, pq tem varios arquivos/diretorios
+
+cp -i m.txt /home/infiniti/'Área de trabalho'/meudiretorio
+c/diretorio absoluto, funciona tb, só copiou o arquivo m.txt e n retornou nd
+
+copiou esses arquivos no diretorio raiz
+cp -v -r . novo
+o ponto representa o diretório atual (-v vai permitir ver)
+
+
+cp -v -r m.txt novo
+copiou oo arquivo q tenho m.txt do diretorio atual p/pasta novo q tem no diretorio ali
+
+ainda no cp:
+-l : cria hard links ao inves de copiar os arquivos
+-s : criar links simbolicos ao inves de copiar arquivos
+-u : copia apenas qnd o arq de origem for mais novo do que o
+arq de destino ou quando o arq de destino não existir
+
+
+
+mkdir cria diretórios
+mkdir novapasta
+
+rm remove arquivos
+-f : remove os arquivos sem perguntar (pq as vzs há conflitos)
+rm arquivopremover.txt
+
+
+
+find procura arquivos
+find .
+procura os arquivos do diretorio atual e dentro das pastas q tem tb
+find ./ -type f -name "o"
+procura arquivos com letra o (type f significa file)
+
+find ./ -type d -name "meu*"
+procura diretorios (-type d) com o nome de meu* (qualquercoisa)
+
+
+
+
+diff: faz comparação entre arquivos e diretórios
+se os arquivos forem identicos, n ha saida
+caso haja diferença entre os 2 arquivos, mostra o nº de linhas e a qtd de byte
+da primeira posição
+
+
+
+
+rmdir remover diretorio (n retorna nada c sucesso)
+1 ocasiao qnd o dir tem arq dentro
+2 ocasiao qnd o dir ta vazio
+
+rmdir: remove diretório vazio
+rm -rf: diretório não vazio
+ou seja:  rmdir diretoriovazio   e   rm -rf diretoriocomarquivos
+
+
+
+
+env trabalha c variaveis de ambiente
+
+PS1: Prompt da linha de comandos
+HOME: diretório /home de 1 usuário logado (tipo ~)
+PATH: lista de diretórios vasculhados quando um comandoo é executado
+
+limao=limao  echo $limao p mostrar limao
+env: exporta variavel como ambiente
+
+dir=limao
+export limao
+export dir
+cd ..
+cd $dir
+vai entrar no diretóorio limao, igual cd limao
+
+https://github.com/davinyvidal/dio-shell-script
+

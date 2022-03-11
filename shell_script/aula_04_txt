@@ -1,0 +1,45 @@
+tac arq.txt -> inverte as linhas
+head -> só mostra as 10 primeiras
+tail -> só mostra as 10 ultimas linhas
+tail arq.txt > distros.txt
+date >> calendario.txt   > o date vai embaixo do cal q ta no .txt, pulando de linha
+
+cat arq1 >> arqmaior.txt -> vai jogar oq tem no arq1 no arqmaior
+cal maio
+date
+cat teste2.txt | more -> vai paginar, aparecendoo um mais... ai dá enter p ir mostrand
+
+cat teste2.txt | less -> pagina tbm
+
+cat maio.txt & cat calendario_2021.txt  -> separa por linha do terminal, c pausa
+cat maio.txt && cat calendario_2021.txt  -> mostra direto, 1 saída só
+
+file maio.txt
+maio.txt: UTF-8 Unicode text
+
+file linux_ubuntu/
+linux_ubuntu/: directory
+
+find ~ -name maio.txt
+/home/infiniti/Área de trabalho/maio.txt
+
+whatis find -> fala oq é
+
+cat < arquivo.txt mesma coisa q sem <
+
+& separa as saídas do terminal dos 2 comandos
+
+&& só se dois comandos forem executados se o 1º for exec c sucesso
+
+
+
+cat lista_nomes.txt | grep matheus ou grep matheus lista_nomes.txt msm coisa
+
+cal setembro 2020 > setembro.txt
+
+less lista_nomes.txt  -> vai exibir em paginaçao
+
+find ~ -name setembro.txt  -> achara o caminho do arquivo
+
+whatis ls -> exibe a explicação do ls
+
