@@ -1,0 +1,33 @@
+#oq é segurança da info, principios, oq é dado
+
+dado -> apenas 1 referencia, 24, @ python
+informaçao -> conjunto de dados q faça sentido "joao tem 24 anos"
+"python é uma ling" "o email de joao é joao24@python.com"
+
+infosec
+area do conhecimento q assegura q todos os dados de 1 ou + info estejam confidenciais, integros e disponiveis em qlqr meio de comunicaçao
+se preocupa desde quando a info é gerada, transportada e descarte/excluída
+
+o ser humano tem necessidade de se sentir seguro, fisiologicas -> seg -> sociais -> estima -> auto realização (topo da piramide)
+
+PILARES da infosec:
+	-integridade (proteger a info de alterações indevidas),
+	-confidencialidade (princípio q visa manter uma info confidencial, sigilosa),
+	-disponibilidade (princípio que visa garantir q 1 recurso e/ou informação esteja disponível);
+	-identificação, autenticaçao (verificar entidade e suas credenciais), autorização (autorizar a entid em 1 sistema) e não repúdio (evitar q 1 entid negue
+suas ações em um sistema)
+
+ex: enviar pacotes ICMP como ping p um host p verificar se está ativo -> contempla o princípio da disponibilidade
+
+
+etapa 3: ICMP PING
+ICMP (internet control message protocol) é um protocolo integrante do protocolo IP utilizado p fornecer relatorios de erros à fonte original
+comando praticamente em todos os OS q consiste no envio de pacotes p/ o equipamento de destino e na "escuta" das respostas
+PING -> ferramenta q utiliza o protocolo ICMP p testar a conectividade entre nós, ver se 1 nó tá ativo (ponto na rede) -> request (requisiçao), recebe reply (resposta)
+"vc está ai?" "destino não encontrado" ping pong
+
+biblioteca os no python
+usar coisas do SO no python, como chamar o ping, manipula-lo
+
+biblioteca time 
+varias funcoes relacionadas ao tempo como tempo de exec

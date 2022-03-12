@@ -1,0 +1,28 @@
+#biblioteca socket
+fornece acesso de baixo nível à interface de rede
+
+o SO fornece a API socket q relaciona o programa com a rede
+
+desenv cliente TCP
+
+TCP
+Transmission control protocol, prot de controle de transmissão
+é um dos protocolos de comunicação, dá suporte à rede global internet,
+verifica se os dados são enviados numa seq correta e sem erros
+portanto usa o principio de infosec INTEGRIDADE p verficiar se os dados
+enviados são íntegros, de maneira integra
+
+o programa verificará se os dados são enviados de maneira correta
+
+desenv cliente UDP
+
+UDP
+User Datagram protocol, ou protocolo de datagrama de usuário
+é um protocolo simples q permite q minha app envie um datagrama (pacote dentro
+de pacote ipv4 ou ipv6) a um determinado destino, mas sem garantia de q o pacote
+chegue corretamente -> esse protocolo n tem principio de INTEGRIDADE, mas sim
+de DISPONIBILIDADE. verifica se certo host esta recebendo dados, n q estejam
+sendo entregues fielmente, assim contemplando a disponibilidade (visa garantir
+recurso (o determinado dominio) p ver se ta disponivel)
+
+dps desenv. de server p ver se conseguem se conectar, c biblioteca socket

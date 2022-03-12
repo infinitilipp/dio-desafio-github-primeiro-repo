@@ -1,0 +1,47 @@
+#blibioteca random, hash, hashlib, multithreading
+
+biblioteca random
+permite q trabalhemos com letras e numeros aleatorios p varios fins
+gera numeros pseudoaleatorios p varias distribuiçoes
+
+será usada no gerador de senhas p randomizar letras e numeros, cada exec gera
+uma nova senha aleatoria
+
+essa ferramenta q desenv trabalha c principios AUTENTICAÇAO (verificar
+entidade e credenciais) e CONFIDENCIALIDADE (manter info confidencial por
+autenticaçao -> Senha)
+
+pode ser usado num sistema p gerar senha forte pro usuario n usar 1234 etc
+
+
+hash
+é um identificador unico gerado por um programa q analisará byte a byte
+de certo dado p gerar de forma unica o hash, cod q so aquele arq terá -> identificador
+se eu identificar 1 unico byte desse arquivo, o cod muda
+
+sha512, 256, md5 etc
+o test123 é um hash q em um ataque pentest o atacante poderia desencriptar seu hash
+do banco de dados q foi encriptado, desencriptaria e iria se revelar por ser uma
+senha conhecida, por isso nao usar senhas comuns (tava no banco do decrypt)
+
+Hash visa INTEGRIDADE
+
+hashlib
+interface comum  p varios algoritmos de hash seguro como sha1 etc
+usar p comparador de hashs
+
+multithreading
+thread = processo e no ambiente multithread cada processo pode responder a varias
+solicitações concorrentemente ou mesmo simultaneamente
+1 proc c varios cores, varios registradores dentro de cada nucleo
+pode responder a varias solicitações simultaneamente
+2 processos concorrendo ao msm procedimento, varias solic de processamento
+
+ex: guias do google chrome, esses processos concorrem e impactam o processamento
+
+biblioteca multithreading
+constroi interf de alto nivel p trabalhar c o processamento
+usando o modulo thread, + de baixo nivel, relacionada c registradores do cpu
+
+biblioteca ipaddress
+capacidade de criar, manipular endereços ipv4, ipv6 e ate redes inteiras
